@@ -1,4 +1,4 @@
-ddocument.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burgerBtn");
   const nav = document.getElementById("mainNav")?.querySelector("ul");
 
@@ -33,17 +33,13 @@ ddocument.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener("click", closeMenu);
   }
 
-  //Перевірка повторного пароля при реєстрації =====
+  //Перевірка повторного пароля
   const pass = document.getElementById("password");
   const confirm = document.getElementById("confirm");
 
   if (pass && confirm) {
     confirm.addEventListener("input", () => {
-      if (confirm.value !== pass.value) {
-        confirm.classList.add("invalid");
-      } else {
-        confirm.classList.remove("invalid");
-      }
+      confirm.classList.toggle("invalid", confirm.value !== pass.value);
     });
   }
 });
