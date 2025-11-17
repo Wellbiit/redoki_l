@@ -1,0 +1,159 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.about-grid .card {
+  background: var(--surface);
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.about-grid .card:hover {
+  transform: translateY(-4px);
+}
+
+.profile-flex {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.book-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.book-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.book-card h3 {
+    font-family: var(--font-title);
+    color: var(--brand);
+    font-size: 18px;
+    text-align: center;
+}
+
+.book-card p {
+    text-align: center;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 26px;
+    margin-top: 40px;
+}
+
+.progress-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.25s ease;
+}
+
+.progress-card:hover {
+    transform: translateY(-4px);
+}
+
+.progress-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+.progress-info h3 {
+    font-family: var(--font-title);
+    color: var(--brand);
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.progress-info p {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: var(--border);
+    height: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+.progress-percent {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--brand);
+}

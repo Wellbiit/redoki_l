@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Safron Modern';
+  src: url('../fonts/Safron_Modern.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --bg: #F5E9DA;
+  --ink: #1F1B1A;
+  --brand: #7B1E3A;
+  --accent: #B23A48;
+  --border: #E6D8CA;
+  --surface: #FFFFFF;
+
+  --font-main: 'Lora', serif;
+  --font-title: 'Safron Modern', serif;
+  --font-accent: 'Great Vibes', cursive;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: var(--brand);
+  text-align: center;
+}
+
+h1 { font-size: 2.3em; letter-spacing: 0.5px; }
+h2 { font-size: 1.6em; color: var(--accent); margin-top: 1.5em; }
+
+p {
+  font-size: 1.05em;
+  text-align: justify;
+}
+
+ul, ol {
+  margin-left: 30px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+}

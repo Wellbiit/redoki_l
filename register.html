@@ -8,32 +8,46 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Бібліотека</a></li>
-        <li><a href="progress.html">Прогрес</a></li>
-        <li><a href="profile.html">Профіль</a></li>
-        <li><a href="login.html">Увійти</a></li>
-        <li><a href="register.html">Реєстрація</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="logo-mini">Readoki</div>
+
+  <button class="burger" id="burgerBtn">
+    ☰
+  </button>
+
+  <nav id="mainNav">
+    <ul>
+      <li><a href="index.html">Бібліотека</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="profile.html">Профіль</a></li>
+      <li><a href="login.html">Увійти</a></li>
+      <li><a href="register.html">Реєстрація</a></li>
+      <li><a href="about.html">Про нас</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main>
     <h1>Створити акаунт Readoki</h1>
-    <form>
-      <label for="name">Ім’я:</label>
-      <input type="text" id="name" placeholder="name" required>
+    <form id="register-form" novalidate>
+
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="name" placeholder="Анна" required minlength="2">
+      <div class="error-msg">Ім'я повинно містити мінімум 2 символи</div>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="name@smth.com" required>
+      <input type="email" id="email" name="email" placeholder="name@smth.com" required>
+      <div class="error-msg">Введіть коректний email</div>
 
       <label for="password">Пароль:</label>
-      <input type="password" id="password" placeholder="•••••••" required>
+      <input type="password" id="password" name="password" placeholder="•••••••" required minlength="6">
+      <div class="error-msg">Пароль має містити мінімум 6 символів</div>
 
-      <button type="submit">Зареєструватися</button>
+      <label for="confirm">Повторити пароль:</label>
+      <input type="password" id="confirm" name="confirm" placeholder="•••••••" required minlength="6">
+      <div class="error-msg">Паролі повинні збігатися</div>
+
+      <button type="submit">Створити акаунт</button>
     </form>
     <p>Вже маєш акаунт? <a href="login.html">Увійти</a></p>
   </main>

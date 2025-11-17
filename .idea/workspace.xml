@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4fa0b11-f524-4ded-b8c1-e4e699ab4837" name="Changes" comment="-" />
+    <list default="true" id="b4fa0b11-f524-4ded-b8c1-e4e699ab4837" name="Changes" comment="-">
+      <change afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/outsider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/profile-photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/reader.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/progress.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Wellbiit"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Wellbiit&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Wellbiit/redoki_l.git",
-    "accountId": "4c67b496-aa2d-4eda-b5d8-8ec75a4f0c9e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Wellbiit/redoki_l.git&quot;,
+    &quot;accountId&quot;: &quot;4c67b496-aa2d-4eda-b5d8-8ec75a4f0c9e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -34,13 +53,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Anna/PycharmProjects/redoki_lab2/image"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Anna/PycharmProjects/redoki_lab2/image&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Anna\PycharmProjects\redoki_lab2\image" />
@@ -98,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760348983484</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-">
+      <option name="closed" value="true" />
+      <created>1760430943875</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760430943875</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

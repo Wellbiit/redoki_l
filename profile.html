@@ -8,30 +8,44 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Бібліотека</a></li>
-        <li><a href="progress.html">Прогрес</a></li>
-        <li><a href="profile.html">Профіль</a></li>
-        <li><a href="login.html">Увійти</a></li>
-        <li><a href="register.html">Реєстрація</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
-    </nav>
+  <div class="logo-mini">Readoki</div>
+
+  <button class="burger" id="burgerBtn">
+    ☰
+  </button>
+
+  <nav id="mainNav">
+    <ul>
+      <li><a href="index.html">Бібліотека</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="profile.html">Профіль</a></li>
+      <li><a href="login.html">Увійти</a></li>
+      <li><a href="register.html">Реєстрація</a></li>
+      <li><a href="about.html">Про нас</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main>
-    <h1>Мій профіль</h1>
-    <p>Ім’я користувача: <b>welbit</b></p>
-    <p>Email: <b>welbit@gmail.com</b></p>
+    <div class="profile-flex">
+      <div class="profile-left">
+        <img src="image/profile-photo.jpg" alt="Профіль" class="profile-photo">
+      </div>
 
-    <h2>Налаштування</h2>
-    <ul>
-      <li>Редагувати профіль</li>
-      <li>Переглянути історію читання</li>
-      <li>Вийти з акаунта</li>
-    </ul>
+      <div class="profile-right">
+        <h2>Анна</h2>
+
+        <p><strong>Email:</strong> anna@example.com</p>
+        <p><strong>Улюблені жанри:</strong> романтика, драма, історичні книги</p>
+
+        <p><strong>Про себе:</strong></p>
+        <p>
+          Люблю читати сучасні романи, класичну літературу та історичні саги.
+          Веду персональний читацький щоденник і люблю структурувати все, що читаю.
+        </p>
+      </div>
+    </div>
 
   </main>
 

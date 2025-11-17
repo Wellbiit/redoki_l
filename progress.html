@@ -8,10 +8,13 @@
 </head>
 <body>
   <header>
-    <nav>
+    <div class="logo-mini">Readoki</div>
+    <button class="burger" id="burgerBtn">☰</button>
+
+    <nav id="mainNav">
       <ul>
         <li><a href="index.html">Бібліотека</a></li>
-        <li><a href="progress.html">Прогрес</a></li>
+        <li><a href="progress.html" class="active">Прогрес</a></li>
         <li><a href="profile.html">Профіль</a></li>
         <li><a href="login.html">Увійти</a></li>
         <li><a href="register.html">Реєстрація</a></li>
@@ -22,20 +25,62 @@
   </header>
 
   <main>
-    <h1>Мій прогрес читання</h1>
-    <p>Слідкуй за прогресом читання)</p>
+  <h1>Мій прогрес читання</h1>
+  <p style="text-align:center;">Ваш поточний стан читання:</p>
 
-    <h2>Приклад:</h2>
-    <ol>
-      <li>“Аутсайдер” — 100%</li>
-      <li>“Помаранчі - не єдині фрукти” — 75%</li>
-      <li>“Читець” — 40%</li>
-    </ol>
+  <div class="progress-grid">
+    <div class="progress-card">
+      <img src="image/outsider.png" alt="Аутсайдер">
 
+      <div class="progress-info">
+        <h3>Аутсайдер</h3>
+        <p>Стівен Кінг</p>
+
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 100%;"></div>
+        </div>
+
+        <div class="progress-percent">100%</div>
+      </div>
+    </div>
+    <div class="progress-card">
+      <img src="image/orange.png" alt="Помаранчі - не єдині фрукти">
+
+      <div class="progress-info">
+        <h3>Помаранчі — не єдині фрукти</h3>
+        <p>Джаннетт Вінтерсон</p>
+
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%;"></div>
+        </div>
+
+        <div class="progress-percent">75%</div>
+      </div>
+    </div>
+
+    <div class="progress-card">
+      <img src="image/reader.png" alt="Читець">
+
+      <div class="progress-info">
+        <h3>Читець</h3>
+        <p>Бернхард Шлінк</p>
+
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 40%;"></div>
+        </div>
+
+        <div class="progress-percent">40%</div>
+      </div>
+    </div>
+  </div>
   </main>
 
-  <footer>
-    <p>© 2025 Readoki</p>
-  </footer>
+
+
+<footer>
+  <p>© 2025 Readoki</p>
+</footer>
+
 </body>
 </html>
+

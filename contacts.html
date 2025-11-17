@@ -8,32 +8,41 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Бібліотека</a></li>
-        <li><a href="progress.html">Прогрес</a></li>
-        <li><a href="profile.html">Профіль</a></li>
-        <li><a href="login.html">Увійти</a></li>
-        <li><a href="register.html">Реєстрація</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-      </ul>
-    </nav>
+  <div class="logo-mini">Readoki</div>
+
+  <button class="burger" id="burgerBtn">
+    ☰
+  </button>
+
+  <nav id="mainNav">
+    <ul>
+      <li><a href="index.html">Бібліотека</a></li>
+      <li><a href="progress.html">Прогрес</a></li>
+      <li><a href="profile.html">Профіль</a></li>
+      <li><a href="login.html">Увійти</a></li>
+      <li><a href="register.html">Реєстрація</a></li>
+      <li><a href="about.html">Про нас</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main>
     <h1>Зв’яжіться з нами</h1>
     <p>Маєте запитання або пропозиції? Напишіть нам:</p>
 
-    <form>
-      <label>Ім’я:</label>
-      <input type="text" name="name" required>
+    <form id="contact-form" novalidate>
+      <label for="name">Ваше ім’я:</label>
+      <input type="text" id="name" name="name" placeholder="Анна" required minlength="2">
+      <div class="error-msg">Введіть ім’я (мінімум 2 символи)</div>
 
-      <label>Email:</label>
-      <input type="email" name="email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="name@smth.com" required>
+      <div class="error-msg">Введіть коректний email</div>
 
-      <label>Повідомлення:</label>
-      <textarea name="message" rows="4" required></textarea>
+      <label for="message">Повідомлення:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення..." required minlength="5"></textarea>
+      <div class="error-msg">Повідомлення повинно містити мінімум 5 символів</div>
 
       <button type="submit">Надіслати</button>
     </form>
