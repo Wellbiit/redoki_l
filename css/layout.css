@@ -13,10 +13,11 @@ nav ul {
   padding: 0;
 }
 
-nav a {
+nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 nav a.active {
@@ -63,7 +64,7 @@ footer {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   header nav ul {
     display: none;
@@ -78,7 +79,8 @@ footer {
     display: flex;
   }
 
-  .burger, .logo-mini {
+  .burger,
+  .logo-mini {
     display: block;
   }
 
@@ -90,6 +92,7 @@ footer {
 
   nav ul li a {
     font-size: 18px;
+    padding: 8px 0;
   }
 }
 
@@ -97,3 +100,4 @@ footer {
   h1 { font-size: 26px; }
   button { font-size: 16px; }
 }
+
