@@ -1,16 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
-
+ddocument.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burgerBtn");
-  const nav = document.getElementById("mainNav").querySelector("ul");
+  const nav = document.getElementById("mainNav")?.querySelector("ul");
 
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
+  let overlay = document.getElementById("navOverlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "navOverlay";
+    overlay.className = "nav-overlay";
+    document.body.appendChild(overlay);
+  }
 
-});
+  if (burger && nav) {
+    const closeMenu = () => {
+      document.body.classList.remove("nav-open");
+      nav.classList.remove("show");
+      burger.classList.remove("open");
+      burger.textContent = "☰";
+    };
 
-//Перевірка повторного пароля при реєстрації
-document.addEventListener("DOMContentLoaded", () => {
+    const toggleMenu = () => {
+      const isOpen = document.body.classList.toggle("nav-open");
+      if (isOpen) {
+        nav.classList.add("show");
+        burger.classList.add("open");
+        burger.textContent = "✕";
+      } else {
+        closeMenu();
+      }
+    };
+
+    burger.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", closeMenu);
+  }
+
+  //Перевірка повторного пароля при реєстрації =====
   const pass = document.getElementById("password");
   const confirm = document.getElementById("confirm");
 
@@ -24,4 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-}
