@@ -51,3 +51,17 @@ img {
   max-width: 100%;
   border-radius: 10px;
 }
+
+.dark-theme {
+    --bg: #1a1a1a;
+    --surface: #2a2a2a;
+    --ink: #f1f1f1;
+    --brand: #b94a78;
+    --accent: #d8779f;
+    --border: #444;
+}
+
+body.dark-theme {
+    background-color: var(--bg);
+    color: var(--ink);
+}

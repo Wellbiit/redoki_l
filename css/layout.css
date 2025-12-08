@@ -133,4 +133,23 @@ body.nav-open .nav-overlay {
   button { font-size: 16px; }
 }
 
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 26px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a.nav-hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    padding: 4px 10px;
+}
 
