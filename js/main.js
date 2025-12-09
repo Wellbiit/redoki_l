@@ -1,4 +1,3 @@
-// main.js — Лабораторна робота 4
 document.addEventListener("DOMContentLoaded", () => {
     console.log("main.js успішно підключено!");
 
@@ -50,26 +49,38 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Перемикач теми
-    const themeToggle = document.getElementById("themeToggle");
+    //Перемикач теми (localStorage)
+    // === Перемикач теми з іконками ===
 
-    //Застосовуємо тему, збережену раніше
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Шлях до іконок
+    const SUN_ICON = "image/sun_theme.png";
+    const MOON_ICON = "image/moon_theme.png";
+
+    // Застосовуємо тему при старті
     const savedTheme = localStorage.getItem("theme");
+
     if (savedTheme === "dark") {
         document.body.classList.add("dark-theme");
-        if (themeToggle) themeToggle.textContent = "🌞";
+        themeIcon.src = SUN_ICON;
+    } else {
+        document.body.classList.remove("dark-theme");
+        themeIcon.src = MOON_ICON;
     }
 
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-theme");
+    // Перемикання теми
+    themeToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark-theme");
 
-            const isDark = document.body.classList.contains("dark-theme");
-            themeToggle.textContent = isDark ? "🌞" : "🌓";
+        // Оновлення іконки
+        themeIcon.src = isDark ? SUN_ICON : MOON_ICON;
 
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
-    }
+        // Збереження
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
 
     //Підсвітка меню
     const navLinks = document.querySelectorAll("nav ul li a");
@@ -84,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    //Події клавіатури(зміна шрифту)
+    //Події клавіатури (зміна шрифту)
     let baseFontSize = parseFloat(
         window.getComputedStyle(document.body).fontSize
     ) || 16;
@@ -103,6 +114,91 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.preventDefault();
     });
+
+    //Форма для контактів
+
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+        const successBox = document.getElementById("formSuccess");
+
+        const fields = [nameInput, emailInput, messageInput];
+
+        const showError = (input, message) => {
+            input.classList.add("invalid");
+            const errorEl = contactForm.querySelector(
+                `.error-msg[data-for="${input.id}"]`
+            );
+            if (errorEl) errorEl.textContent = message;
+        };
+
+        const clearError = (input) => {
+            input.classList.remove("invalid");
+            const errorEl = contactForm.querySelector(
+                `.error-msg[data-for="${input.id}"]`
+            );
+            if (errorEl) errorEl.textContent = "";
+        };
+
+        fields.forEach(input => {
+            input.addEventListener("input", () => {
+                clearError(input);
+                if (successBox) successBox.hidden = true;
+            });
+        });
+
+        contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            fields.forEach(clearError);
+            if (successBox) {
+                successBox.hidden = true;
+            }
+
+            let isValid = true;
+
+            const nameValue = nameInput.value.trim();
+            const emailValue = emailInput.value.trim();
+            const messageValue = messageInput.value.trim();
+
+            //Валідація імені (мінімум 3 символи)
+            if (nameValue.length < 3) {
+                showError(nameInput, "Імʼя повинно містити не менше 3 символи.");
+                isValid = false;
+            }
+
+            //Валідація email (перевірка на @ і домен)
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailValue)) {
+                showError(emailInput, "Введіть коректну електронну адресу.");
+                isValid = false;
+            }
+
+            //Валідація повідомлення (мінімум 10 символів)
+            if (messageValue.length < 10) {
+                showError(messageInput, "Повідомлення має містити не менше 10 символів.");
+                isValid = false;
+            }
+
+            console.log("Форма контактів:", {
+                name: nameValue,
+                email: emailValue,
+                message: messageValue
+            });
+
+            if (!isValid) return;
+
+            contactForm.reset();
+            if (successBox) {
+                successBox.hidden = false;
+                successBox.textContent = "Форма успішно надіслана!";
+            }
+        });
+    }
 });
+
 
 

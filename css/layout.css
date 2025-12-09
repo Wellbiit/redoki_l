@@ -153,3 +153,18 @@ nav ul li a.nav-hover {
     padding: 4px 10px;
 }
 
+.theme-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.theme-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+}
+
+

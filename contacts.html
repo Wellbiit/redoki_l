@@ -10,7 +10,9 @@
   <header>
   <div class="logo-mini">Readoki</div>
   <button class="burger" id="burgerBtn">☰</button>
-  <button class="theme-btn" id="themeToggle">🌓</button>
+  <button class="theme-btn" id="themeToggle">
+    <img id="themeIcon" src="image/moon_theme.png" alt="theme icon">
+  </button>
 
   <nav id="mainNav">
     <ul>
@@ -26,21 +28,31 @@
   </header>
 
   <main>
-    <h1>Зв’яжіться з нами</h1>
+    <h1>Звʼяжіться з нами</h1>
     <p>Маєте запитання або пропозиції? Напишіть нам:</p>
 
-    <form id="contact-form" novalidate>
-      <label for="name">Ваше ім’я:</label>
-      <input type="text" id="name" name="name" placeholder="Анна" required minlength="2">
-      <div class="error-msg">Введіть ім’я (мінімум 2 символи)</div>
+    <div id="formSuccess" class="success-msg" hidden>
+      Форма успішно надіслана!
+    </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="name@smth.com" required>
-      <div class="error-msg">Введіть коректний email</div>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <label for="name">Імʼя</label>
+        <input type="text" id="name" name="name" placeholder="Ваше імʼя">
+        <div class="error-msg" data-for="name"></div>
+      </div>
 
-      <label for="message">Повідомлення:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення..." required minlength="5"></textarea>
-      <div class="error-msg">Повідомлення повинно містити мінімум 5 символів</div>
+      <div class="form-group">
+        <label for="email">Електронна пошта</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com">
+        <div class="error-msg" data-for="email"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Повідомлення</label>
+        <textarea id="message" name="message" rows="4" placeholder="Ваше повідомлення"></textarea>
+        <div class="error-msg" data-for="message"></div>
+      </div>
 
       <button type="submit">Надіслати</button>
     </form>
