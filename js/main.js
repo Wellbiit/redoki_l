@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const SUN_ICON = "image/sun_theme.png";
     const MOON_ICON = "image/moon_theme.png";
 
-    //Застосовуємо тему при старті
+    if (themeToggle && themeIcon) {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         themeIcon.src = MOON_ICON;
     }
 
-    //Перемикання теми
     themeToggle.addEventListener("click", () => {
         const isDark = document.body.classList.toggle("dark-theme");
 
