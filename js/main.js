@@ -49,35 +49,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Перемикач теми (localStorage)
+    //Перемикач теми з іконками(LocalStorage)
     const themeToggle = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
 
-    //Шлях до іконок
     const SUN_ICON = "image/sun_theme.png";
     const MOON_ICON = "image/moon_theme.png";
 
     if (themeToggle && themeIcon) {
-    const savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("theme");
 
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-theme");
-        themeIcon.src = SUN_ICON;
-    } else {
-        document.body.classList.remove("dark-theme");
-        themeIcon.src = MOON_ICON;
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-theme");
+            themeIcon.src = SUN_ICON;
+        } else {
+            document.body.classList.remove("dark-theme");
+            themeIcon.src = MOON_ICON;
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const isDark = document.body.classList.toggle("dark-theme");
+
+            themeIcon.src = isDark ? SUN_ICON : MOON_ICON;
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
     }
 
-    themeToggle.addEventListener("click", () => {
-        const isDark = document.body.classList.toggle("dark-theme");
-
-        themeIcon.src = isDark ? SUN_ICON : MOON_ICON;
-
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-
-
-    //Підсвітка меню
+    //Підсвітка меню навігації
     const navLinks = document.querySelectorAll("nav ul li a");
 
     navLinks.forEach(link => {
@@ -110,8 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
     });
 
-    //Форма для контактів
-
+    //Робота з формою контактів
     const contactForm = document.getElementById("contactForm");
 
     if (contactForm) {
@@ -149,9 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
 
             fields.forEach(clearError);
-            if (successBox) {
-                successBox.hidden = true;
-            }
+            if (successBox) successBox.hidden = true;
 
             let isValid = true;
 
@@ -159,20 +154,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const emailValue = emailInput.value.trim();
             const messageValue = messageInput.value.trim();
 
-            //Валідація імені (мінімум 3 символи)
             if (nameValue.length < 3) {
-                showError(nameInput, "Імʼя повинно містити не менше 3 символи.");
+                showError(nameInput, "Імʼя повинно містити щонайменше 3 символи.");
                 isValid = false;
             }
 
-            //Валідація email (перевірка на @ і домен)
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(emailValue)) {
                 showError(emailInput, "Введіть коректну електронну адресу.");
                 isValid = false;
             }
 
-            //Валідація повідомлення (мінімум 10 символів)
             if (messageValue.length < 10) {
                 showError(messageInput, "Повідомлення має містити не менше 10 символів.");
                 isValid = false;
