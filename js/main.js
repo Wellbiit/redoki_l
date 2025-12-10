@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainEl = document.querySelector("main");
     if (mainEl) {
         const newParagraph = document.createElement("p");
-        newParagraph.textContent = "Цей елемент додано JavaScript у межах ЛР4.";
+        newParagraph.textContent = "Readoki Lab4";
         newParagraph.style.marginTop = "20px";
         newParagraph.style.color = "var(--brand)";
         newParagraph.style.fontWeight = "600";
@@ -50,16 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //Перемикач теми (localStorage)
-    // === Перемикач теми з іконками ===
-
     const themeToggle = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
 
-    // Шлях до іконок
+    //Шлях до іконок
     const SUN_ICON = "image/sun_theme.png";
     const MOON_ICON = "image/moon_theme.png";
 
-    // Застосовуємо тему при старті
+    //Застосовуємо тему при старті
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
@@ -70,14 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
         themeIcon.src = MOON_ICON;
     }
 
-    // Перемикання теми
+    //Перемикання теми
     themeToggle.addEventListener("click", () => {
         const isDark = document.body.classList.toggle("dark-theme");
 
-        // Оновлення іконки
         themeIcon.src = isDark ? SUN_ICON : MOON_ICON;
 
-        // Збереження
         localStorage.setItem("theme", isDark ? "dark" : "light");
     });
 
